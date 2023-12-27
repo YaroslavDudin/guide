@@ -1,0 +1,10 @@
+var isSquare = function(n){
+if (n <0){
+  return false
+}
+let squareRoot = Math.sqrt(n)
+if (squareRoot % 1 !== 0) {
+return false
+}
+return true
+}
