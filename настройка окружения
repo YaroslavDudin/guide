@@ -26,3 +26,6 @@ npm lint-fix -уберёт ошибки
 code index.js  открыли файлик 
 в самчтобом конце пишем export и туда все названия функций
 чтобы запустить файл node index.js 
+git add -A
+git commit -m 'nazvanie'
+git push
