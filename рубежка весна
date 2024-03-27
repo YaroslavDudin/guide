@@ -1,0 +1,68 @@
+const showInfo = (content) => {
+  const carsData1 = content;
+  const result = carsData1.trim().split('\n').slice(1).length;
+  console.log(`Count: ${result}`);
+  const carData = content.split('\n').slice(1);
+  const brands = carData.map((row) => row.split(';')[0]);
+
+  brands.sort();
+
+  const brandString = brands.join(', ');
+
+  console.log(`Brands:${brandString.slice(1)}`);
+
+  let minPrice = Infinity;
+  let maxPrice = 0;
+
+  carData.forEach((row) => {
+    const [, , , price] = row.split(';');
+    const carPrice = parseInt(price);
+
+    if (carPrice < minPrice) {
+      minPrice = carPrice;
+    }
+
+    if (carPrice > maxPrice) {
+      maxPrice = carPrice;
+    }
+  });
+
+  console.log(`Cars price: Min price: ${minPrice}, Max price: ${maxPrice}`);
+
+  let maxSales = 0;
+  let modelWithMaxSales = '';
+
+  carData.forEach((row) => {
+    const [, model, , , , , , , europeSales] = row.split(';');
+    const salesEurope = parseInt(europeSales);
+
+    if (salesEurope > maxSales) {
+      maxSales = salesEurope;
+      modelWithMaxSales = model;
+    }
+  });
+
+  console.log(`Max Europe sale: ${maxSales * 4}`);
+
+  const carsData2 = content.trim().split('\n').slice(1);
+
+  let minSales = Infinity;
+  let leastSoldCar = '';
+
+  carsData2.forEach((car) => {
+    const [brand, model, , , salesUSA, salesEurope, salesAsia, salesAfrica, salesAustralia] = car.split(';');
+    const totalSales = parseInt(salesUSA) + parseInt(salesEurope) + parseInt(salesAsia) + parseInt(salesAfrica) + parseInt(salesAustralia);
+
+    if (totalSales < minSales) {
+      minSales = totalSales;
+      leastSoldCar = `${brand} ${model}`;
+    }
+  });
+
+  console.log(`Outsider: ${leastSoldCar}`);
+};
+
+export default showInfo;
+
+
+  const brands = carData.map((row) => row.split(';')[0]); - выбор строки
