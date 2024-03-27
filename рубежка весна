@@ -66,3 +66,5 @@ export default showInfo;
 
 
   const brands = carData.map((row) => row.split(';')[0]); - выбор строки
+ const carData = content.split('\n').slice(1);  
+      const brands = carData.map((row) => row.split(';')[4]);
