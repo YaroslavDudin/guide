@@ -68,3 +68,16 @@ const showInfo = (content) => {
   console.log(`Outsider: ${leastSoldCar.brand} ${leastSoldCar.model}`);
 };
 export default showInfo;
+это чисто соло map
+import _ from "lodash";
+const showInfo = (content) => {
+    const row = content.split('\n').slice(1,-1);
+      const rowCar = row.map((row) => row.split(';')[0]);
+        const rowPrice = row.map((row) => row.split(';')[3]);
+          const rowEUPrice = row.map((row) => row.split(';')[5]);
+    console.log(`Count: ${row.length}`);
+    console.log(`Brands: ${rowCar.sort().join(', ')}`);
+    console.log(`Cars price: Min price: ${Math.min(...rowPrice)}, Max price: ${Math.max(...rowPrice)}`);
+    console.log(`Max Europe sale: ${Math.max(...rowEUPrice)}`);
+};
+export default showInfo;
