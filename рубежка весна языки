@@ -1,1 +1,24 @@
+const lines = content.split('\n');
+  const linesClear = lines.slice(1, -1);
+  const obj = linesClear.map((line) => line.split(',')).map(([lng, users, origin, diff, countries]) => ({
+    lng, users, origin, diff, countries,
+  }));
+  obj.sort((b, a) => a.users - b.users);
 
+  const diffCounts = obj.reduce((acc, curr) => {
+    acc[curr.diff] = (acc[curr.diff] || 0) + 1;
+    return acc;
+  }, {});
+
+  const languagesWithOneCountryCount = linesClear.map((line) => line.split(',')).filter((line) => line[4] === '1').length;
+  const continents = Array.from(new Set((linesClear.map((row) => row.split(',')[2]))));
+  const continentsFixed = continents.map((item) => ` ${item}`);
+  const lineCount = lines.length;
+  console.log(`Count: ${lineCount - 2}`);
+  console.log(`Continents:${continentsFixed}`);
+  console.log(`Amount of languages with 1 country: ${languagesWithOneCountryCount}`);
+  console.log(`The most popular language: ${obj[0].lng}`);
+  console.log(`Complexity: Низкая: ${diffCounts['Низкая']}, Средняя: ${diffCounts['Средняя']}, Высокая: ${diffCounts['Высокая']}`);
+
+};
+export default showInfo;
