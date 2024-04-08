@@ -2,4 +2,6 @@
 Если есть что нужно добавить киньте в Issues
 
 
-[**-> MDN WEB DOCS <-**](https://developer.mozilla.org/ru/docs/Web/JavaScript)
+[**-> ДОКУМЕНТАЦИЯ ПО БАЗОВЫМ МЕТОДАМ <-**](https://developer.mozilla.org/ru/docs/Web/JavaScript)
+
+[**-> ДОКУМЕНТАЦИЯ ПО МЕТОДАМ ЛОДАШ <-**](https://lodash.com/docs/)

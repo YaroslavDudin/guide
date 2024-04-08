@@ -1,4 +1,4 @@
-# Math.pow
+# Math.pow()
 **Описание**
 
 возводит число в степень
@@ -9,7 +9,7 @@
 ```
 console.log(Math.pow(3, 4)); // 81
 ```
-# Math.floor
+# Math.floor()
 **Описание**
 
 Окгругляет в меньшую сторону
@@ -20,7 +20,7 @@ console.log(Math.pow(3, 4)); // 81
 ```
 console.log(Math.floor(2.9999)); // 2
 ```
-# Math.round
+# Math.round()
 **Описание**
 
 Округлягет в большую сторону
@@ -37,7 +37,7 @@ console.log(Math.round(6.4)); // 6
 ```
 console.log(Math.round(6.6)); // 7
 ```
-# Math.abs
+# Math.abs()
 **Описание**
 
 Выводит модуль числа
@@ -54,7 +54,7 @@ console.log(Math.abs(-3)); // 3
 ```
 console.log(Math.abs(3)); // 3
 ```
-# Math.sqrt
+# Math.sqrt()
 **Описание**
 
 Квадратный корень из числа
@@ -67,7 +67,7 @@ console.log(Math.sqrt(4)); // 2
 ```
 console.log(Math.sqrt(15)); // 3.872983-346207417
 ```
-# Math.cbrt
+# Math.cbrt()
 **Описание**
 
 Кубический корень из числа
@@ -82,7 +82,7 @@ console.log(Math.sqrt(125)); //  5
 console.log(Math.cbrt(15)); // 2.46621207433047
 ```
 
-# Math.ceil 
+# Math.ceil()
 **Описание**
 
 Округляет в большую сторону
@@ -93,7 +93,7 @@ console.log(Math.cbrt(15)); // 2.46621207433047
 ```
 console.log(Math.ceil(3.00001)); // 4
 ```
-# Math.random
+# Math.random()
 **Описание**
 
  Чтобы получить случайное число в определенном промежутке (дробное или целое) следует пользоваться специальными приемами. Получение случайного дробного числа между min и max происходит так:
@@ -125,7 +125,7 @@ function getRandomInt(min, max) {
 
 console.log(getRandomInt(10, 100)); // 12
 ```
-# Math.max & Math.min
+# Math.max() & Math.min()
 **Описание**
 
 Math.max() возвращает наибольшее из переданных аргументов.
@@ -143,7 +143,7 @@ console.log(Math.max(1, 2, 3)); // 3
 
 Давайте выведем наименьшее из чисел 1, 2, 3:
 
-# Math.trunc
+# Math.trunc()
 **Описание**
 
 Math.trunc() возвращает целую часть числа.
@@ -155,7 +155,7 @@ Math.trunc() возвращает целую часть числа.
 console.log(Math.trunc(1.2)); // 1
 console.log(Math.trunc(-1.2)); // -1
 ```
-# Math.sign
+# Math.sign()
 **Описание**
 
 возвращает знак числа.
