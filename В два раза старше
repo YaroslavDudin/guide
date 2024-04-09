@@ -1,4 +1,0 @@
-```function twiceAsOld(dadYearsOld, sonYearsOld) {
-  const ageDifference = Math.abs(dadYearsOld - 2 * sonYearsOld);
-  return ageDifference;
-}```
