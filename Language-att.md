@@ -1,3 +1,5 @@
+```
+const showInfo = (content) => {
 
 const lines = content.split('\n');
   const linesClear = lines.slice(1, -1);
@@ -23,8 +25,9 @@ const lines = content.split('\n');
 
 };
 export default showInfo;
-////
-вариант решение номер 2
+```
+## вариант решение номер 2
+```
 import _ from 'lodash';
 
 const showInfo = (content) => {
@@ -79,3 +82,4 @@ const showInfo = (content) => {
 };
 
 export default showInfo;
+```

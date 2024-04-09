@@ -1,4 +1,4 @@
-## 1
+## Вариант решения
 ```
 const app = (content) => {
   const autTiltle = content.split('\n');
