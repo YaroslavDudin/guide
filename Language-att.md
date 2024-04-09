@@ -1,3 +1,4 @@
+## Вариант решения 1
 ```
 const showInfo = (content) => {
 

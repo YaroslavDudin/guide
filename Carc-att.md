@@ -1,3 +1,5 @@
+## Вариант решения 1
+```
 const showInfo = (content) => {
   const rows = content.split('\n');
   const brands = content.split('\n').map((brand) => brand.split(';').reduce((acc, el, i) => {
@@ -68,7 +70,10 @@ const showInfo = (content) => {
   console.log(`Outsider: ${leastSoldCar.brand} ${leastSoldCar.model}`);
 };
 export default showInfo;
-это чисто соло map
+```
+## Вариант решения 2
+**На 4**
+```
 import _ from "lodash";
 const showInfo = (content) => {
     const row = content.split('\n').slice(1,-1);
@@ -81,3 +86,4 @@ const showInfo = (content) => {
     console.log(`Max Europe sale: ${Math.max(...rowEUPrice)}`);
 };
 export default showInfo;
+```
