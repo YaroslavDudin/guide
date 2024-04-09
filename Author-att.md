@@ -1,3 +1,5 @@
+## 1
+```
 const app = (content) => {
   const autTiltle = content.split('\n');
 
@@ -37,3 +39,4 @@ const app = (content) => {
   console.log(`Words percentage: ${totalWords.toFixed(1)}%, Unions percentage: ${totalUnions.toFixed(1)}%, Signs percentage: ${totalSigns.toFixed(1)}%`);
 };
 export default app;
+```

@@ -1,3 +1,4 @@
+
 const lines = content.split('\n');
   const linesClear = lines.slice(1, -1);
   const obj = linesClear.map((line) => line.split(',')).map(([lng, users, origin, diff, countries]) => ({
