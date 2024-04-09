@@ -87,3 +87,40 @@ const showInfo = (content) => {
 };
 export default showInfo;
 ```
+## Вариант который бал на аттестации
+```
+import _ from 'lodash';
+
+const showInfo = (content) => {
+const rows = content.trim().split('\n').slice(1);
+const obj = rows.map((row) => row.split(','))
+.map(([brand, model, year, kyzov, probeg, korobka, fuel, price, color]) => ({
+brand,
+model,
+year,
+kyzov,
+probeg,
+korobka,
+fuel,
+price,
+color,
+}));
+const sorted = obj.sort((a, b) => a.year - b.year)[0];
+const sumProbeg = obj.reduce((acc, { probeg }) => acc + Number(probeg), 0);
+const level = rows.map((rowis) => rowis.split(',')[8]).reduce((acc, levels) => {
+acc[levels] = (acc[levels] || 0) + 1;
+return acc;
+}, {});
+
+const complexityString = Object.entries(level)
+.map(([complexity, count]) => `${complexity}: ${count}`)
+.join(', ');
+
+console.log(`Количество автомобилей: ${_.size(obj)}`);
+console.log(`Средний пробег: ${sumProbeg / rows.length}`);
+console.log(`Стоимость самой дорогой машины: ${_.maxBy(obj, 'price').price}`);
+console.log(`Самый старый автомобиль: ${sorted.brand} ${sorted.model}`);
+console.log(`Все цвета: ${complexityString}`);
+};
+export default showInfo;
+```
