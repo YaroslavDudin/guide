@@ -87,7 +87,7 @@ const showInfo = (content) => {
 };
 export default showInfo;
 ```
-## Вариант который бал на аттестации
+## Вариант который был на аттестации
 ```
 import _ from 'lodash';
 
