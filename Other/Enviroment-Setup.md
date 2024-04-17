@@ -76,3 +76,7 @@ git push -f --set-upstream origin "название ветки"
 ```
 https://github.com/YaroslavDudin/tests
 ```
+**Более простой вариант**
+```
+https://github.com/YaroslavDudin/haiskillJest
+```
