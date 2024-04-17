@@ -72,3 +72,7 @@ git push -f
 
 git push -f --set-upstream origin "название ветки"
 ```
+## Enviroment-Setup JEST
+```
+https://github.com/YaroslavDudin/tests
+```
