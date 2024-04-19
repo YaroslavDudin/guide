@@ -3,7 +3,7 @@
 const app = (content) => {
   const autTiltle = content.split('\n');
 
-  const arrTitle = autTiltle.map((row) => row);
+  const arrTitle = autTiltle.map((row) => row)
 
   const filteredArray = arrTitle.filter((item) => item.trim() !== '').slice(2, -2);
 
