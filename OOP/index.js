@@ -40,7 +40,7 @@ class Admin extends User {
     super(name, age, email, password)
   }
   removePost(postId) {
-    console.log(`Your post with ID ${postId} has been removed.`);
+    console.log(`Your post with ID ${postId} has been removed because you not an admin.`);
     
     postIdArr = postIdArr.filter(post => post !== postId)
   }
