@@ -97,6 +97,8 @@ text-align : end // аналогично значению right, если тек
   </article>
 </section>
 ```
+
+```
  .news article h2 {
     font-size : 20px;
  }
