@@ -16,22 +16,23 @@ function idGenerate() {
           throw new Error("Text length must be greater than 1")
         };
         
-        class Post {
-          #idPost = idGenerate()
-          constructor(text, author) {
-            this.text = text
-            this.author = author
-          }
-          getId() {
-            return this.#idPost
-          }
-        }
+        
         const newPost = new Post(text)
         console.log(`User ${this.name}, with ID ${this.#id} posted: ${newPost.text} (Post ID: ${newPost.getId()})`)
         postIdArr.push(newPost.getId())
       }
   }
-  
+
+  class Post {
+    #idPost = idGenerate()
+    constructor(text, author) {
+      this.text = text
+      this.author = author
+    }
+    getId() {
+      return this.#idPost
+    }
+  }
 
 const user = new User("John", 30, "johndoe@me.com", "password123")
 user.post("Hello world!")
@@ -40,7 +41,7 @@ class Admin extends User {
     super(name, age, email, password)
   }
   removePost(postId) {
-    console.log(`Your post with ID ${postId} has been removed because you not an admin.`);
+    console.log(`Your post with ID ${postId} has been removed.`);
     
     postIdArr = postIdArr.filter(post => post !== postId)
   }
