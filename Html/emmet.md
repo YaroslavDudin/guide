@@ -18,6 +18,8 @@ ul>li*3{Привет , это эммет}
 section.cards>article.card>div.card-title{название товара}+img[src="###"][alt="типо картинка 1 товара"]+(.card-price>span.price-sum{24 000}+span.cur-price{рубли})+button{заказать}
 
 ```
+
+```
 <section class="cards">
     <article class="card">
         <div class="card-title">название товара</div>
