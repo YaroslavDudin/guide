@@ -27,7 +27,7 @@ p {
 
 **Пример**
 
-font-family: sans-serif;
+```font-family: sans-serif;```
 
 ## font-weight
 **Описание**
