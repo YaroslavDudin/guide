@@ -47,7 +47,4 @@ class Admin extends User {
   }
 }
 const admin = new Admin("Jane", 25, "janedoe@me.com", "password123")
-console.log(postIdArr);
-
-admin.removePost(postIdArr[0])
-console.log(postIdArr);
+admin.removePost(postIdArr)
