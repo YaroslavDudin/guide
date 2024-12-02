@@ -171,3 +171,59 @@ console.log('penis' + ' chlen') // => penis chlen
 console.log('penis ' + 'chlen') // => penis chlen
 
 ```
+
+
+## Переменные, константы
+
+Для хранения данных используются
+
+
+1. Переменные 
+```javascript
+    let mama = 0
+    let papa = 2
+```
+Их можно изменять 
+
+```javascript
+    let mama = 0
+    let papa = 2
+
+    papa = 3
+    mama = -1 
+```
+Изначальное значение мамы было 0, но мы задали новое значение нашей переменной на -1 по аналогии с papa = 3
+
+2. Константы
+```javascript
+    const papa = 2
+    const mama = 0
+```
+Разница между переменной и константой в том, что ее значение нельзя изменить
+
+```javascript
+    const papa = 2
+    const mama = 0
+
+    papa = 1 // => ошибка
+    mama = 1 // => ошибка
+```
+
+Так же нельзя изменять значение строк
+```javascript
+    let str = 'string';
+    str[2] = f
+    console.log(str) // => 'string
+```
+
+Порядок следования инструкций в коде с переменными имеет огромное значение. Переменная должна быть определена до того, как будет использована. Ниже пример ошибки, которую очень часто допускают новички:
+```javascript
+console.log(greeting);
+let greeting = 'Father!';
+```
+
+
+
+```javascript
+
+```
