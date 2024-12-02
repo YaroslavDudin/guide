@@ -244,3 +244,41 @@ console.log(dollar1 + dollar) // => dochkapochka
 // также можно применять и по другому 
 console.log(dollar1 + 'dengi') // => dochkadengi
 ```
+
+
+## Именование 
+
+Интерпретатор может прочитать код любой код с любыми названиями переменных
+Но название переменных мы делаем в первую очередь для людей 
+```javascript
+    let x = 'mama' // неверный нейминг
+    console.log(x); // => mama
+    let parentMan = 'father' // верый нейминг
+```
+
+Нейминг переменной должен расскрывать то что мы в ней делаем 
+```javascript
+    const greeting = 'Hello, World';
+```
+Это пример простого имени, но не все имена так просты
+
+
+есть несколько стилей именования переменных:
+
+snake_case — для разделения используется подчеркивание. Например: my_super_var.
+lowerCamelCase — каждое слово в переменной пишется с заглавной буквы, кроме первого. Например: mySuperVar.
+
+НЕ ВЕРНО (значение чисел беруться неизвестно откуда )
+```javascript
+    let dollarsCount = 50 * 1.25; 
+    let rublesCount = dollarsCount * 60; 
+```
+ВЕРНО (конкретное пояснение переменной)
+```javascript
+    let dollarsPerEuro = 1.25;
+    let rublesPerDollar = 60;
+    
+    let dollarsCount = 50 * dollarsPerEuro; 
+    let rublesCount = dollarsCount * rublesPerDollar;
+```
+
