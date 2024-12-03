@@ -277,7 +277,7 @@ lowerCamelCase — каждое слово в переменной пишетс�
 ```javascript
     let dollarsPerEuro = 1.25;
     let rublesPerDollar = 60;
-    
+
     let dollarsCount = 50 * dollarsPerEuro; 
     let rublesCount = dollarsCount * rublesPerDollar;
 ```
