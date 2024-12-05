@@ -39,6 +39,23 @@ System.out.println("Hexlet".charAt(2)) // x
 System.out.println("Hexlet".charAt("Hexlet".length() -1)) //t
 ```
 
+## trim()
+
+```java
+var name = " How much is the fish?   \n";
+// вырезаем концевые пробелы и перенос строки
+name = name.trim();
+```
+## replace()
+
+```java
+// Удаляем вопрос
+var name = " How much is the fish?   \n";
+
+name = name.replace("?", "");
+// Заменяем пробелы на дефис
+name = name.replace(" ", "-");
+```
 # Создание переменных / констант 
 
 ## переменная 
@@ -123,4 +140,10 @@ short sum = a + 2;
 ```java
 var a = 10;
 var result = "Число: " + a; // Число: 10
+```
+
+# Создание первого метода
+void - метод ничего не возвращает
+```java
+public static void printMotto() {}
 ```
