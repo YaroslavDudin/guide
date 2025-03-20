@@ -1,4 +1,6 @@
 export default function app() {
+// для 1 задания тут создается куча полей и прочей шляпы
+// 1 задание \/
   const form = document.createElement('form');
   form.id = 'registrationForm';
 
@@ -37,10 +39,13 @@ export default function app() {
   submitButton.value = 'Submit';
   submitButton.classList.add('btn', 'btn-primary');
 
+  // 1 задание /\
+
   function updateSubmitButtonState() {
     submitButton.disabled = !(nameInput.classList.contains('is-valid') && phoneInput.classList.contains('is-valid'));
-  }
+  } // функция для 4 задания, динамически обновляет статус кнопки сабмит
 
+  // валидация поля nameInput для 3 задания \/
   nameInput.addEventListener('input', (event) => {
     const name = event.target.value;
 
@@ -54,10 +59,12 @@ export default function app() {
       nameInput.classList.add('form-control');
     }
     updateSubmitButtonState();
-  });
+  }); // валидация поля nameInput для 3 задания /\
 
   nameGroup.appendChild(nameLabel);
   nameGroup.appendChild(nameInput);
+
+  // валидация поля phoneInput для 3 задания \/
 
   phoneInput.addEventListener('input', (event) => {
     const phone = event.target.value;
@@ -73,10 +80,12 @@ export default function app() {
       phoneInput.classList.remove('form-control');
     }
     updateSubmitButtonState();
-  });
+  }); // валидация поля phoneInput для 3 задания /\
 
   phoneGroup.appendChild(phoneLabel);
   phoneGroup.appendChild(phoneInput);
+
+  // 2 задание \/
 
   submitButton.addEventListener('click', (event) => {
     event.preventDefault();
@@ -107,6 +116,10 @@ export default function app() {
     xhr.send(JSON.stringify(Object.fromEntries(formData)));
   });
 
+  // 2 задание, работа с запросами /\
+  // тут не использую фетч поскольку тесты баганутые и фетч с ними не работает
+  //  илья подсказал использовать xmlHttpRequest
+
   form.appendChild(nameGroup);
   form.appendChild(phoneGroup);
   form.appendChild(submitButton);
@@ -115,4 +128,5 @@ export default function app() {
   formContainer.appendChild(form);
 
   updateSubmitButtonState();
+  // вызов функции для обновления статуса кнопки
 }
