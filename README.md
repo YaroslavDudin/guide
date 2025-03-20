@@ -1,4 +1,4 @@
-# guide by yaroslav & luka0204
+# guide by yaroslav & judetsuki
 Если есть что нужно добавить киньте в Issues
 
 [**-> ДОКУМЕНТАЦИЯ ПО БАЗОВЫМ МЕТОДАМ <-**](https://developer.mozilla.org/ru/docs/Web/JavaScript)
