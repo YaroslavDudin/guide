@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "step1",
+      "setup": "npm install && npm install --save-dev jest",
+      "run": "npx jest --colors --testNamePattern='step1'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "step2",
+      "setup": "npm install && npm install --save-dev jest",
+      "run": "npx jest --colors --testNamePattern='step2'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "step3",
+      "setup": "npm install && npm install --save-dev jest",
+      "run": "npx jest --colors --testNamePattern='step3'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "step4",
+      "setup": "npm install && npm install --save-dev jest",
+      "run": "npx jest --colors --testNamePattern='step4'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
