@@ -2,6 +2,9 @@
 
 ## windows
 
+команда чтобы работало виртуальное окружение:
+``Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force``
+
 ``python -m venv venv``
 
 ``source venv/script/activate``
