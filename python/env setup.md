@@ -7,7 +7,7 @@
 
 ``python -m venv venv``
 
-``source venv/script/activate`` или ``venv/Scripts/activate``
+``source venv/script/activate`` или ```venv/Scripts/activate```
 
 ``python -m pip install --upgrade pip``
 
