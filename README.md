@@ -1,8 +1,52 @@
-# guide by yaroslav & judetsuki
-Если есть что нужно добавить киньте в Issues
+README.md — Django Models и Views
+Модели
 
-[**-> ДОКУМЕНТАЦИЯ ПО БАЗОВЫМ МЕТОДАМ <-**](https://developer.mozilla.org/ru/docs/Web/JavaScript)
+Созданы модели Category, Brand, Product, Order, OrderItem:
 
-[**-> ДОКУМЕНТАЦИЯ ПО МЕТОДАМ ЛОДАШ <-**](https://lodash.com/docs/)
+Category — хранит название и slug для URL.
 
-[**--> ДОКУМЕНТАЦИЯ ПО МАТЧЕРАМ JEST <--**](https://jestjs.io/ru/docs/expect)
+Brand — название и страна бренда.
+
+Product — название, описание, цена, количество, ForeignKey на Category и Brand.
+
+Order — имя и email клиента, дата создания, статус оплаты.
+
+OrderItem — позиция заказа: продукт, количество, цена на момент покупки.
+
+Сложные моменты: методы моделей (__str__, вычисляемые поля), related_name для обратной связи, slug для URL.
+
+Связи
+
+ForeignKey: один-ко-многим (Product → Category/Brand, OrderItem → Order/Product).
+
+Обратная связь: через related_name можно из родителя получить все дочерние объекты (order.items.all()).
+
+Views
+
+Получаем объекты через Model.objects.all() и передаём в шаблон.
+
+Для оптимизации можно использовать select_related и prefetch_related (уменьшение числа SQL-запросов).
+
+Шаблоны
+
+Циклы {% for ... %} для вывода списков.
+
+{% empty %} для обработки пустых списков.
+
+Доступ к связанным объектам: item.product.name.
+
+URLs
+
+Настраиваются в urls.py с указанием пути и имени.
+
+Примеры: /products/ → список продуктов, /orders/ → список заказов.
+
+Важные моменты
+
+related_name позволяет родителю обращаться к дочерним объектам.
+
+select_related / prefetch_related оптимизируют запросы к базе.
+
+Методы моделей позволяют считать финальные значения (цена, количество).
+
+Slug и уникальные поля нужны для корректного хранения объектов и красивых URL.

@@ -1,0 +1,23 @@
+<h1>Список заказов</h1>
+
+<div>
+    {% for order in orders %}
+        <div>
+            <p>Имя: {{ order.customer_name }}</p>
+            <p>Email: {{ order.customer_email }}</p>
+            <p>Дата создания: {{ order.created_at }}</p>
+
+            <p>Товары в заказе:</p>
+            <ul>
+                {% for item in order.items.all %}
+                    <li>{{ item.quantity }} × {{ item.product.name }} ({{ item.price_at_purchase }})</li>
+                {% empty %}
+                    <li>Нет товаров в заказе</li>
+                {% endfor %}
+            </ul>
+
+            <p>Общее количество товаров: {{ order.items.count }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+</div>

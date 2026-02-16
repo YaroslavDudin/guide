@@ -1,0 +1,11 @@
+<div>
+    {% for product in products %}
+    <div>
+        <h3> имя {{product.name}}</h3>
+        <h3>категория {{product.category}}</h3>
+        <h3>бренд {{product.brand}}</h3>
+        <h3>цена {{product.price}}</h3>
+        <h3>количество {{product.quantity}}</h3>
+        {% endfor %}
+    </div>
+</div>
